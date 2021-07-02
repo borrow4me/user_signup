@@ -121,19 +121,19 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-# EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
-# EMAIL_HOST = "smtp.gmail.com"
-# EMAIL_USE_TLS = True
-# EMAIL_PORT = 587
-# EMAIL_HOST_USER = "sunnyemmanuel5@gmail.com"
-# EMAIL_HOST_PASSWORD = "sunnysmart1010"
-
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST = "smtp.gmail.com"
 EMAIL_USE_TLS = True
-EMAIL_HOST = "smtp.mailtrap.io"
-EMAIL_HOST_USER = "0ab2ee6beb57ff"
-EMAIL_HOST_PASSWORD = "c87faded3b6ff2"
 EMAIL_PORT = 587
+EMAIL_HOST_USER = "eliskafilat10@gmail.com"
+EMAIL_HOST_PASSWORD = "07083659432"
+
+# EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+# EMAIL_USE_TLS = True
+# EMAIL_HOST = "smtp.mailtrap.io"
+# EMAIL_HOST_USER = "0ab2ee6beb57ff"
+# EMAIL_HOST_PASSWORD = "c87faded3b6ff2"
+# EMAIL_PORT = 587
 
 # SENDGRID_API_KEY = os.getenv('SENDGRID_API_KEY')
 
