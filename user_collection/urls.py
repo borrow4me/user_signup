@@ -25,4 +25,4 @@ urlpatterns = [
     path('confirmed/', apps.Confirmed.as_view(template_name ="confirmed.html")),
     path('apply/', apps.Apply.as_view(template_name ="apply.html"))
 ]
-urlpatterns += staticfiles_urlpatterns()
+urlpatterns += staticfiles_urlpatterns() 
