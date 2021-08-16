@@ -10,34 +10,34 @@
     <meta name="keywords" content="Loan Company, Loan Agency, Students Loan, Car Loan, Home Loan, Loan Product, Personal Loan, Bad credit, Loan Advisor, Financial Website Template, Banking, Loan provider, Bootstrap Template, Landing Page, EasyLoan">
     <meta name="author" content="">
 
-    <title>EasyLoan - For Your Car</title>
-    <link rel="shortcut icon" href="{%static '/img/favicon.ico'%}" type="image/x-icon">
-    <link rel="icon" href="/static/img/favicon.ico" type="image/x-icon">
+    <title>Borrow4me - For most wanted loan</title>
+    <link rel="shortcut icon" href="{%static '/assets/img/bb.ico'%}" type="image/x-icon">
+    <link rel="icon" href="{%static '/assets/img/bb.ico'%}" type="image/x-icon">
 
     <!-- Bootstrap Core CSS -->
-    <link href="../static/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{%static '/assets/bootstrap/css/bootstrap.min.css'%}" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
 
     <!-- Plugin CSS -->
-    <link rel="stylesheet" href="/static/assets/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/static/assets/simple-line-icons/css/simple-line-icons.css">
+    <link rel="stylesheet" href="{%static '/assets/font-awesome/css/font-awesome.min.css'%}">
+    <link rel="stylesheet" href="{%static 'assets/simple-line-icons/css/simple-line-icons.css'%}">
 
     <!-- Animate CSS -->
-    <link href="/static/css/animate.min.css" rel="stylesheet" media="all">
+    <link href="{%static 'assets/css/animate.min.css'%}" rel="stylesheet" media="all">
 
     <!-- Preloader CSS -->
     <!-- <link rel="stylesheet" href="/static/css/preloader.css"> -->
 
     <!-- Jquery UI CSS -->
-    <link href="/static/assets/jquery/ui/jquery-ui.css" rel="stylesheet">
+    <link href="{%static '/assets/jquery/ui/jquery-ui.css'%}" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="/static/css/custom.css" rel="stylesheet">
+    <link href="{%static '/assets/css/custom.css'%}" rel="stylesheet">
 
     <!-- Responsive CSS -->
-    <link href="/static/css/responsive.css" rel="stylesheet">
+    <link href="{%static '/assets/css/responsive.css'%}" rel="stylesheet">
 
 
 
@@ -124,7 +124,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand page-scroll" href="#page-top">
-                    <img src="/static/img/logo_home1.png" alt="LOGO">
+                    <img src="{%static '/assets/img/logo4.png'%}" alt="LOGO">
                 </a>
             </div>
 
@@ -149,7 +149,7 @@
                         <a class="page-scroll" href="#contact">Contact</a>
                     </li>
                     <li>
-                        <a href="#" class="btn btn-default" data-animation="animated fadeInLeft" data-toggle="modal" data-target="#Quote-form">ApplyNow</a>
+                        <a href="{% url 'apply' %}" class="btn btn-default" data-animation="animated fadeInLeft">ApplyNow</a>
                     </li>
                 </ul>
             </div>
@@ -182,9 +182,9 @@
                         <div class="row">
                             <!-- Slide Text Layer -->
                             <div class="slide-text slide_style_left">
-                                <h1 data-animation="animated zoomInRight">Get Your loan loan</h1>
-                                <p data-animation="animated fadeInLeft">Instant Approval For Car Loan</p>
-                                <a href="#" class="btn btn-default" data-animation="animated fadeInLeft" data-toggle="modal" data-target="#Quote-form">APPLY FOR LOAN.</a>
+                                <h1 data-animation="animated zoomInRight">Get Your loan </h1>
+                                <p data-animation="animated fadeInLeft">Instant Approval For Market Loan</p>
+                                <a href="{% url 'apply' %}" class="btn btn-default" data-animation="animated fadeInLeft" data-toggle="modal" data-target="#Quote-form">APPLY FOR LOAN.</a>
                                 <a href="#features" class="btn btn-primary" data-animation="animated fadeInRight">Learn
                                     More</a>
                             </div>
@@ -202,8 +202,8 @@
                     <!-- Slide Text Layer -->
                     <div class="slide-text slide_style_center">
                         <h1 data-animation="animated flipInX">Get Your Home Loan</h1>
-                        <p data-animation="animated lightSpeedIn">Small Business Loans</p>
-                        <a href="#" class="btn btn-default" data-animation="animated fadeInLeft" data-toggle="modal" data-target="#Quote-form">APPLY FOR LOAN</a>
+                        <p data-animation="animated lightSpeedIn">Small Business Loan</p>
+                        <a href="{% url 'apply' %}" class="btn btn-default" data-animation="animated fadeInLeft" data-toggle="modal" data-target="#Quote-form">APPLY FOR LOAN</a>
                         <a href="#features" class="btn btn-primary" data-animation="animatb ed fadeInRight">Learn
                             More</a>
                     </div>
@@ -220,7 +220,7 @@
                     <div class="slide-text slide_style_right">
                         <h1 data-animation="animated zoomInLeft">Get Your Education Loan</h1>
                         <p data-animation="animated fadeInRight">Instant Approval For Education Loan</p>
-                        <a href="#" class="btn btn-default" data-animation="animated fadeInLeft" data-toggle="modal" data-target="#Quote-form">APPLY FOR LOAN</a>
+                        <a href="{% url 'apply' %}" class="btn btn-default" data-animation="animated fadeInLeft" data-toggle="modal" data-target="#Quote-form">APPLY FOR LOAN</a>
                         <a href="#features" class="btn btn-primary" data-animation="animated fadeInRight">Learn More</a>
                     </div>
                 </div>
@@ -320,8 +320,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-10 col-md-offset-1">
-                    <h2 class="section-heading">Car Loans - Bad Credit, Good Credit, or No Credit!</h2>
-                    <p class="about_p">Getting a car loan with bad credit has never been easier! At EasyLoan, we want to help you get into the car you deserve.</p>
+                    <h2 class="section-heading"> Loans - Bad Credit, Good Credit, or No Credit!</h2>
+                    <p class="about_p">Getting a loan with bad credit has never been easier! At Borrow4me, we want to help you get into that you deserve.</p>
                     <hr>
                 </div>
             </div>
@@ -336,10 +336,20 @@
                     </div>
                     <div class="col-md-3 col-sm-6">
                         <div class="single_counter">
-                            <p class="counter_icon"><i class="fa fa-usd" aria-hidden="true"></i></p>
+                            <p class="counter_icon" style="font-size: 32px;
+                            position: relative;
+                            top: -10px;">
+                                <!-- <i class="fa fa-usd" aria-hidden="true"> -->
+                                <span style="content: \e001" aria-hidden="true">&#8358;</span>
+                            </p>
                             <span class="counter">550</span>K
-                            <p>Car Loan</p>
+                            <p> Loan</p>
                         </div>
+                        <!-- <p class="counter_icon" style="font-size: 32px;
+                        position: relative;
+                        top: -10px;">
+                            <span style="content: \e001">&#8358;</span></i>
+                            </p> -->
                     </div>
                     <div class="col-md-3 col-sm-6">
                         <div class="single_counter">
@@ -610,8 +620,9 @@
             <div class="row">
                 <div class="col-md-5">
                     <i class="icon-question faq_icon"></i>
-                    <h2 class="faq_title">Ask about our low rate car loans?</h2>
-                    <p>Porttitor acese its commodo non lorem estibulum finibus urna eu efficitur non lorem acese its do remmselorem ipusm dolro sit commodo.</p>
+                    <h2 class="faq_title">LOAN APPLICATION GUIDE
+                    </h2>
+                    <p>Everything you need to know about taking a loan.</p>
                     <a class="btn btn-primary page-scroll" href="#contact">Ask Question</a>
                 </div>
                 <div class="col-md-7 mar-20t">
@@ -619,71 +630,74 @@
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <h4 class="panel-title">
-                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Lorem ipsum dolor sit?</a>
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Who is Eligible for a Loan?</a>
                                 </h4>
                             </div>
                             <div id="collapseOne" class="panel-collapse collapse in">
                                 <div class="panel-body">
-                                    Lorem ipsum dolor sit amet, consectetur <strong>adipisicing elit</strong>. Adipisci animi consequatur cupiditate delectus dicta dolore dolorem ex harum ipsum laborum nobis nulla odit officia. Adipisci animi consequatur
-                                    cupiditate.
+
+                                    <ul>
+                                        <li>A salary earner receiving a minimum of N15,000 monthly</li>
+                                        <li> A pensioner receiving a minimum pension of N10,000 monthly</li>
+                                        <li>A business owner</li>
+                                        <li>A Seller at the market</li>
+
+                                    </ul>
+
                                 </div>
                             </div>
+
                         </div>
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <h4 class="panel-title">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTen">Lorem ipsum dolor sit amet,
-                                        consectetur adipisicing?</a>
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTen">How can I apply for a Loan?</a>
                                 </h4>
                             </div>
                             <div id="collapseTen" class="panel-collapse collapse">
                                 <div class="panel-body">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci animi consequatur cupiditate delectus dicta dolore dolorem ex harum ipsum laborum nobis nulla odit officia. Adipisci animi consequatur cupiditate.
+                                    <ul>
+                                        <li>Fill out an application form on the website</li>
+                                        <li> Contact our customer service on +234 095 93493</li>
+                                        <li>Send us Email on info@Borrow4me@gmail.com</li>
+
+                                    </ul>
                                 </div>
                             </div>
                         </div>
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <h4 class="panel-title">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseEleven">Lorem ipsum dolor sit amet,
-                                        consectetur?</a>
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseEleven">Can I repay my loan or repay part of my loan earlier than the end date?</a>
                                 </h4>
                             </div>
                             <div id="collapseEleven" class="panel-collapse collapse">
                                 <div class="panel-body">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicingelit. Adipisci animi consequatur cupiditate <strong>delectus dicta dolore dolorem ex harum</strong> ipsum laborum nobis nulla odit officia. Adipisci animi consequatur
-                                    cupiditate.
+                                    Yes, you can. Call us today on 012716816 or send an email to: info@Borrow4me@gmail.com
                                 </div>
                             </div>
                         </div>
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <h4 class="panel-title">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">Lorem ipsum dolor?</a>
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">What benefits do I gain if I repay my loan without defaulting?</a>
                                 </h4>
                             </div>
                             <div id="collapseTwo" class="panel-collapse collapse">
                                 <div class="panel-body">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicingelit. Adipisci animi consequatur cupiditate delectus dicta dolore dolorem ex harum ipsum laborum nobis nulla odit officia. Adipisci animi <strong>consequatur cupiditate</strong>.
-                                </div>
+                                    You are eligible for up to 3 months’ instalment refund when you repay on time
+                                    <br>Terms and conditions apply </div>
                             </div>
                         </div>
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <h4 class="panel-title">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">Lorem ipsum dolor sit amet?</a>
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">I am having issues meeting up with my loan repayments?</a>
                                 </h4>
                             </div>
                             <div id="collapseThree" class="panel-collapse collapse">
                                 <div class="panel-body">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicingelit:
-                                    <ul>
-                                        <li>Adipisci animi consequatur</li>
-                                        <li>Adipisci animi consequatur cupiditate</li>
-                                        <li>Adipisci animi consequatur cupiditate delectus</li>
-                                        <li>Adipisci animi consequatur cupiditate delectus dicta</li>
-                                    </ul>
-                                </div>
+                                    We can reschedule your loan to make your repayments easier<br> Call us today on 012716816 or send an email to: customerservice@unionbankng.com </div>
                             </div>
                         </div>
                     </div>
@@ -758,28 +772,28 @@
                 <div class="col-sm-12">
                     <ul class="list-inline list-logo">
                         <li class="">
-                            <a href="#"><img src="/static/img/brand-logo/me.png" alt="Brand Logo"></a>
+                            <a href="#"><img src="{%static '/assets/img/brand-logo/me.jpeg'%}" alt="Brand Logo"></a>
                         </li>
                         <li class="">
-                            <a href="#"><img src="/static/img/brand-logo/b_logo.png" alt="Brand Logo"></a>
+                            <a href="#"><img src="{%static '/assets/img/brand-logo/download.png'%}" alt="Brand Logo"></a>
                         </li>
                         <li class="">
-                            <a href="#"><img src="/static/img/brand-logo/b_logo.png" alt="Brand Logo"></a>
+                            <a href="#"><img src="{%static '/assets/img/brand-logo/indo.png'%}" alt="Brand Logo"></a>
                         </li>
                         <li class="">
-                            <a href="#"><img src="/static/img/brand-logo/b_logo.png" alt="Brand Logo"></a>
+                            <a href="#"><img src="{%static '/assets/img/brand-logo/oax.jpeg'%}" alt="Brand Logo"></a>
                         </li>
                         <li class="">
-                            <a href="#"><img src="/static/img/brand-logo/b_logo.png" alt="Brand Logo"></a>
+                            <a href="#"><img src="{%static '/assets/img/brand-logo/soil.jpeg'%}" alt="Brand Logo"></a>
                         </li>
                         <li class="">
-                            <a href="#"><img src="/static/img/brand-logo/b_logo.png" alt="Brand Logo"></a>
+                            <a href="#"><img src="{%static '/assets/img/brand-logo/300.jpeg'%}" alt="Brand Logo"></a>
                         </li>
                         <li class="">
-                            <a href="#"><img src="/static/img/brand-logo/b_logo.png" alt="Brand Logo"></a>
+                            <a href="#"><img src="{%static '/assets/img/brand-logo/download.png'%}" alt="Brand Logo"></a>
                         </li>
                         <li class="">
-                            <a href="#"><img src="/static/img/brand-logo/b_logo.png" alt="Brand Logo"></a>
+                            <a href="#"><img src="{%static '/assets/img/brand-logo/tmg.jpeg'%}" alt="Brand Logo"></a>
                         </li>
                     </ul>
                 </div>
@@ -838,7 +852,9 @@
         <div class="container mr_top_10">
             <div class="row">
                 <div class="col-lg-7 col-md-6 col-sm-6">
-                    <form action="mailer.php" method="post">
+
+                    <form action="{%static 'mailer.php'%}" method="post">
+                        {% csrf_token %}
                         <div class="form-group">
                             <div class="input-group">
                                 <input type="text" class="form-control" name="InputName" id="InputName" placeholder="Enter Name" required>
@@ -917,11 +933,6 @@
             <div class="modal-content">
                 <div class="modal-body">
                     <div class="form-container">
-                        <div style="text-align:center; margin-top: 20px; margin-bottom: 20x;">
-                            <span style="font-weight: bold;">How Much do you need?</span>
-                            <input type=" text " placeholder="Min ₦5,000 ">
-
-                        </div>
                         <!-- <div class="form-mockup ">
                             <h2>Request Quote Now</h2>
                             <h4>Easy to apply for a loan with us, Once you have complete this form. </h4>
@@ -956,26 +967,25 @@
                                 <button type="submit " class="btn btn-default quote_btn ">Send Request</button>
                             </form>
                         </div> -->
-                        <form id="regForm " action="" method="POST" role="form">
+                        <!-- <form id="regForm " action="" method="POST" role="form">
                             {% csrf_token %}
                             <h3 style="text-align: center; color: #15549a; ">Just Five(5) Steps to get your Loan</h3>
-                            <br>
-                            <!-- One "tab " for each step in the form: -->
+                            <br> One "tab " for each step in the form:
 
                             <div class=" "><span style="font-weight: bold; margin-top: 30px; ">Personal Info:</span>
                                 <p>first Name:
                                     <input placeholder="First name... " required name="fname">
                                 </p>
                                 <p>Last Name<input placeholder="Last name... " required name="lname"></p>
-                                <!-- <p>DOB<input type="date " id="birthday " name="birthday " placeholder="Date Of Birth " required></p> -->
-                                <!-- <p>
+                                <p>DOB<input type="date " id="birthday " name="birthday " placeholder="Date Of Birth " required></p>
+                                <p>
                                     <select id="gender " required>
                                         <option value="volvo ">Gender:</option>
                                         <option value="volvo ">Male</option>
                                         <option value="saab ">Female</option>
         
                                       </select>
-                                </p> -->
+                                </p>
                             </div>
 
 
@@ -1025,15 +1035,15 @@
                                 </div>
                             </div>
 
-                            <!-- Circles which indicates the steps of the form: -->
-                            <!-- <div style="text-align:center;margin-top:40px; ">
+                            Circles which indicates the steps of the form:
+                            <div style="text-align:center;margin-top:40px; ">
                                 <span class="step "></span>
                                 <span class="step "></span>
                                 <span class="step "></span>
                                 <span class="step "></span>
-                            </div> -->
+                            </div>
 
-                        </form>
+                        </form> -->
                     </div>
                 </div>
             </div>

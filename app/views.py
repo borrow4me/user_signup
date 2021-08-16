@@ -12,6 +12,9 @@ from django.conf import settings
 class Confirmed(TemplateView):
     template_name ="confirmed.html"
 
+class Mail(TemplateView):
+    template_name ="mail.html"
+
 class Apply(TemplateView):
     template_name ="apply.html"
     @csrf_exempt
