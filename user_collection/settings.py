@@ -25,7 +25,9 @@ SECRET_KEY = '&^a2vb$1_c!%897$krs%u)v&dftv(wx6c-u50+!ned-qvgbilr'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    '*'
+]
 
 
 # Application definition
@@ -102,7 +104,7 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
-# Internationalization
+
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
 
 LANGUAGE_CODE = 'en-us'
@@ -119,21 +121,30 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
-STATIC_URL = '/static/'
+# STATIC_URL = '/static/'
 
-# EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
-# EMAIL_HOST = "smtp.gmail.com"
-# EMAIL_USE_TLS = True
-# EMAIL_PORT = 587
-# EMAIL_HOST_USER = "sunnyemmanuel5@gmail.com"
-# EMAIL_HOST_PASSWORD = "sunnysmart1010"
+# STATICFILES_DIRS = (
+#     os.path.join(BASE_DIR, 'myAssets'),
+# )
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'myAssets')]
+# VENV_PATH = os.path.dirname(BASE_DIR)
+# STATIC_ROOT = os.path.join(VENV_PATH, 'static_root')
+
 
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST = "smtp.gmail.com"
 EMAIL_USE_TLS = True
-EMAIL_HOST = "smtp.mailtrap.io"
-EMAIL_HOST_USER = "0ab2ee6beb57ff"
-EMAIL_HOST_PASSWORD = "c87faded3b6ff2"
 EMAIL_PORT = 587
+EMAIL_HOST_USER = "eliskafilat10@gmail.com"
+EMAIL_HOST_PASSWORD = "07083659432"
+
+# EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+# EMAIL_USE_TLS = True
+# EMAIL_HOST = "smtp.mailtrap.io"
+# EMAIL_HOST_USER = "0ab2ee6beb57ff"
+# EMAIL_HOST_PASSWORD = "c87faded3b6ff2"
+# EMAIL_PORT = 587
 
 # SENDGRID_API_KEY = os.getenv('SENDGRID_API_KEY')
 
